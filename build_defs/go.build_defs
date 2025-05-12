@@ -266,7 +266,6 @@ def go_library(name:str, srcs:list, resources:list=[], asm_srcs:list=None, hdrs:
                      to name.
       pgo_file (str): The CPU profile to supply for profile-guided optimisation.
     """
-    assert srcs, "Cannot provide an empty srcs list to go_library"
     cover = cover and CONFIG.BUILD_CONFIG == "cover"
     package = package or name
     out = package + '.a'
